@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen>{
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              GestureDetector(
+              InkWell(
                 onTap: (){},
                 child: Text(
                   "View all",
@@ -65,16 +65,19 @@ class _HomeScreenState extends State<HomeScreen>{
   }
 
   Widget _buildFoodItems(Food food){
-    return Container(
-      margin: EdgeInsets.only(bottom: 20.0),
-      child: BoughtFood(
-        id: food.id,
-        name: food.name,
-        imagePath: food.imagePath,
-        category: food.category,
-        discount: food.discount,
-        price: food.price,
-        ratings: food.ratings,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        margin: EdgeInsets.only(bottom: 20.0),
+        child: BoughtFood(
+          id: food.id,
+          name: food.name,
+          imagePath: food.imagePath,
+          category: food.category,
+          discount: food.discount,
+          price: food.price,
+          ratings: food.ratings,
+        ),
       ),
     );
   }

@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage>{
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              GestureDetector(
+              InkWell(
                 onTap: (){},
                 child: Text(
                   "View all",
